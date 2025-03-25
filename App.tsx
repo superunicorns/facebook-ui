@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import CircularIcon from './components/CircularIcon';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Let's start Facebook UI redesign!</Text>
+      <CircularIcon />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "#fff",
     alignItems: 'center',
     justifyContent: 'center',
   },
