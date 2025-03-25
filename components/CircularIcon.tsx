@@ -21,18 +21,18 @@ export default CircularIcon;
 
 const styles = StyleSheet.create({
   container: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
     position: "relative"
   },
   notification: {
     backgroundColor: "red",
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 10, 
+    height: 10,
+    borderRadius: 5,
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",

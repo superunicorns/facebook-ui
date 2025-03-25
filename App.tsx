@@ -1,18 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import CircularIcon from './components/CircularIcon';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { StyleSheet, View, Text } from 'react-native';
+import HorizontalSpitBar from './components/HorizontalSplitBar';
+import { SafeAreaView } from "react-native-safe-area-context";
+import Constants from 'expo-constants';
+
+const STATUSBAR_HEIGHT = Constants.statusBarHeight
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <CircularIcon backgroundColor='#BEBEBE' icon={ <MaterialIcons name="search" size={20} color="#fff" /> } />
-      <CircularIcon backgroundColor='#FA7373' icon={ <MaterialCommunityIcons name="bell" size={18} color="#fff" /> } />
-      <CircularIcon backgroundColor='#84B6FB' notification icon={ <MaterialCommunityIcons name="account-group" size={18} color="#fff" /> } />
-      <CircularIcon backgroundColor='blue' icon={ <MaterialIcons name="search" size={18} color="#fff" /> } />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={[{ paddingTop: STATUSBAR_HEIGHT }, styles.container]}>
+        <StatusBar style="auto" />
+        <HorizontalSpitBar />
+        <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
+          <Text>feed</Text>
+        </View>
+      </SafeAreaView>
   );
 }
 
@@ -20,7 +23,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
