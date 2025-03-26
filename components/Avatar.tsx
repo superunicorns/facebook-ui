@@ -4,7 +4,7 @@ import React from 'react'
 const Avatar = ({ imageUri, border, borderColor }: { imageUri: string; border?: boolean; borderColor?: string; }) => {  
   return (
     <View>
-      <Image source={{ uri: imageUri }} style={{ width: 50, height: 50, borderRadius: 25, borderColor: border ? borderColor : "transparent", borderWidth: 1.5 }} />
+      <Image source={{ uri: imageUri }} style={{ width: 42, height: 42, borderRadius: 21, borderColor: border ? borderColor : "transparent", borderWidth: 1.5 }} />
     </View>
   )
 }

@@ -1,15 +1,16 @@
 import { View, StyleSheet } from 'react-native'
-import React, { ReactNode } from 'react'
+import React from 'react'
 import HorizontalSplitBar from './HorizontalSplitBar';
-import Avatar from './Avatar';
+import AvatarBar from './AvatarBar';
 
 const HeaderBar = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <HorizontalSplitBar />
-      <View style={styles.bottomHeader}>
-        <Avatar imageUri='https://images.pexels.com/photos/948873/pexels-photo-948873.jpeg?cs=srgb&dl=pexels-olly-948873.jpg&fm=jpg' />
-      </View>
+      <AvatarBar 
+        imageUri="https://images.pexels.com/photos/31252333/pexels-photo-31252333.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+        title="What's on your mind, Lisa?" 
+      />
     </View>
   )
 }
@@ -17,13 +18,9 @@ const HeaderBar = () => {
 export default HeaderBar;
 
 const styles = StyleSheet.create({
-  bottomHeader: { 
-    width: "100%", 
-    paddingHorizontal: 15, 
-    paddingVertical: 10, 
-    flexDirection: "row", 
-    backgroundColor: "lightgreen", 
-    alignItems: "center", 
-    justifyContent: "space-between"
+  container: {
+    paddingHorizontal: 18,
+    backgroundColor: "#fff"
   },
 })
+

@@ -1,20 +1,12 @@
-import { View, Image, Dimensions, ScaledSize } from 'react-native'
-import React, { ReactNode } from 'react'
+import { View, Image, StyleSheet } from 'react-native'
+import React from 'react'
 import CircularIcon from './CircularIcon';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const HorizontalSplitBar = () => {
   return (
-    <View style={{
-      backgroundColor: "#fff",
-      width: "100%",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
-      height: 90,
-      paddingHorizontal: 15,
-    }}>
+    <View style={styles.container}>
       <View>
         <Image resizeMode='contain' source={require("../assets/facebook-logo.png")} style={{ width: 120 }} />
       </View>
@@ -29,3 +21,13 @@ const HorizontalSplitBar = () => {
 }
 
 export default HorizontalSplitBar;
+
+const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: 60,
+  }
+})
