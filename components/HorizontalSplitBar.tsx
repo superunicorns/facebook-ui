@@ -1,16 +1,14 @@
-import { View, Image, Dimensions } from 'react-native'
-import React from 'react'
+import { View, Image, Dimensions, ScaledSize } from 'react-native'
+import React, { ReactNode } from 'react'
 import CircularIcon from './CircularIcon';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
-const HorizontalSpitBar = () => {
-  const ScreenWidth = Dimensions.get("screen").width;
-
+const HorizontalSplitBar = () => {
   return (
     <View style={{
       backgroundColor: "#fff",
-      width: ScreenWidth,
+      width: "100%",
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
@@ -30,4 +28,4 @@ const HorizontalSpitBar = () => {
   )
 }
 
-export default HorizontalSpitBar;
+export default HorizontalSplitBar;

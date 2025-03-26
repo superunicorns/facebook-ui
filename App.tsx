@@ -1,17 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
-import HorizontalSpitBar from './components/HorizontalSplitBar';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import Constants from 'expo-constants';
+import HeaderBar from './components/HeaderBar';
 
 const STATUSBAR_HEIGHT = Constants.statusBarHeight
+const ScreenWidth = Dimensions.get("screen").width;
 
 export default function App() {
-
   return (
     <SafeAreaView style={[{ paddingTop: STATUSBAR_HEIGHT }, styles.container]}>
         <StatusBar style="auto" />
-        <HorizontalSpitBar />
+        <HeaderBar />
         <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
           <Text>feed</Text>
         </View>
@@ -23,5 +23,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    width: ScreenWidth,
   },
 });
